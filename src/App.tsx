@@ -15,13 +15,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
-import CustomMap from './CustomMap';
+import CustomMap from './components/CustomMap';
 import { geolocated, geoPropTypes } from "react-geolocated";
 import { CircularProgress } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
-import Venue from './Venue';
-import {Shop} from "./Objects";
+import Venue from './components/Venue';
+import {Shop} from "./utils/Objects";
 
 const drawerWidth = 400;
 
