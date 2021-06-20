@@ -79,6 +79,8 @@ function App(props: Props) {
 
   const [shops, setShops] = React.useState<Shop[]>([]);
 
+  const secret : string = process.env.REACT_CLIENT_SECRET || "0UOE3LE4Y1ENZZBGEW0LBJBRYHKWDJST215YIJOUE4I2UBWL";
+  const id : string = process.env.REACT_CLIENT_ID || "1JG0XMW312H5GZJWJNDEY2YHUWSOZVEF2PFMZFAWUSCXWWO4";
 
   useEffect(() => {
     if (navigator.geolocation) { 
@@ -105,7 +107,7 @@ function App(props: Props) {
         disabled={latitude === 0 || longitude === 0}
         onChange={event => {
           let search = event.target.value;
-          axios.get(`https://api.foursquare.com/v2/venues/search?client_id=1JG0XMW312H5GZJWJNDEY2YHUWSOZVEF2PFMZFAWUSCXWWO4&client_secret=0UOE3LE4Y1ENZZBGEW0LBJBRYHKWDJST215YIJOUE4I2UBWL&v=20180323&limit=10&ll=${latitude},${longitude}&query=${search}`)
+          axios.get(`https://api.foursquare.com/v2/venues/search?client_id=${id}&client_secret=${secret}&v=20180323&limit=10&ll=${latitude},${longitude}&query=${search}`)
             .then(res => {
               setShops(res.data.response.venues);
               })
@@ -181,7 +183,7 @@ function App(props: Props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         {latitude !== 0 && longitude !== 0 && <CustomMap shops={shops} latitude={latitude} longitude={longitude} />}
-        {(latitude === 0 || longitude === 0) && <CircularProgress />}
+        {(latitude === 0 || longitude === 0) && <CircularProgress style={{marginLeft: "50%", marginTop: "20%"}}/>}
       </main>
     </div>
   );
