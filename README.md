@@ -10,7 +10,7 @@
 
 ### `docker run -d -p 80:80 izicap`
 
-## Environment variables (in production
+## Environment variables (in production)
 
 ### `docker run -d -p 80:80 -e REACT_CLIENT_ID=<> -e REACT_CLIENT_SECRET=<> izicap`
 
