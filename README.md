@@ -20,7 +20,7 @@
 The map work with react-leaflet
 ![alt text](https://github.com/06tom06/izicap/blob/main/rapport/img2.png)
 ![alt text](https://github.com/06tom06/izicap/blob/main/rapport/img3.png)
-The is not display when the gps is disable
+The map is not display when the gps is disable
 ![alt text](https://github.com/06tom06/izicap/blob/main/rapport/img4.png)
 ![alt text](https://github.com/06tom06/izicap/blob/main/rapport/img5.png)
 Responsive
