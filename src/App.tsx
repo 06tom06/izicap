@@ -105,7 +105,7 @@ function App(props: Props) {
         disabled={latitude === 0 || longitude === 0}
         onChange={event => {
           let search = event.target.value;
-          axios.get(`https://api.foursquare.com/v2/venues/search?client_id=${process.env.REACT_CLIENT_ID}&client_secret=${process.env.REACT_CLIENT_SECRET}&limit=10&ll=${latitude},${longitude}&query=${search}`)
+          axios.get(`https://api.foursquare.com/v2/venues/search?client_id=1JG0XMW312H5GZJWJNDEY2YHUWSOZVEF2PFMZFAWUSCXWWO4&client_secret=0UOE3LE4Y1ENZZBGEW0LBJBRYHKWDJST215YIJOUE4I2UBWL&v=20180323&limit=10&ll=${latitude},${longitude}&query=${search}`)
             .then(res => {
               setShops(res.data.response.venues);
               })
